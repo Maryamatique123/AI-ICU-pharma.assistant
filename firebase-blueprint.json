@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "Registered ICU Clinical Pharmacists",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "hospitalName": { "type": "string" },
+        "licenseNumber": { "type": "string" },
+        "icunit": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "patients": {
+      "title": "Patients",
+      "description": "ICU Patients created by clinical pharmacists",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "mrn": { "type": "string" },
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "gender": { "type": "string" },
+        "weightKg": { "type": "number" },
+        "heightCm": { "type": "number" },
+        "serumCreatinine": { "type": "number" },
+        "diagnosis": { "type": "string" },
+        "unit": { "type": "string" },
+        "allergies": { "type": "array", "items": { "type": "string" } },
+        "medications": { "type": "array" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "mrn", "name", "age", "weightKg", "heightCm", "serumCreatinine", "diagnosis"]
+    },
+    "reviews": {
+      "title": "Reviews",
+      "description": "Prescription review records stored in Firestore",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "patientId": { "type": "string" },
+        "patientName": { "type": "string" },
+        "mrn": { "type": "string" },
+        "pharmacistName": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "status": { "type": "string" },
+        "notes": { "type": "string" },
+        "analysis": { "type": "object" }
+      },
+      "required": ["userId", "patientId", "patientName", "mrn", "timestamp", "analysis"]
+    }
+  }
+}

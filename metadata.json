@@ -1,0 +1,6 @@
+{
+  "name": "ICU Clinical Pharmacist Assistant",
+  "description": "Hospital EMR-style clinical decision support for ICU pharmacists featuring prescription analysis, AI drug interaction & renal dose recommendations, clinical calculators, drug lookup, and printable consultation reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
