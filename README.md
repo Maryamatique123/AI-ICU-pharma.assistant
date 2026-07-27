@@ -10,6 +10,17 @@ ICU Clinical Pharmacist Assistant is a production-ready AI-powered web applicati
 
 The application combines modern web technologies with Google Gemini AI to assist pharmacists in making evidence-based medication decisions and improving patient safety in intensive care units.
 
+## ⭐ Key Highlights
+
+- AI-powered ICU Clinical Decision Support
+- Google Gemini AI Integration
+- Firebase Authentication & Firestore Database
+- Real-time Patient Management
+- AI Prescription Review
+- Comprehensive Drug Lookup
+- Clinical Calculators
+- Printable EMR-style Reports
+- Responsive Modern UI
 ---
 
 # 🎯 Problem Statement
@@ -146,7 +157,7 @@ Generate printable EMR-style consultation reports including:
 
 # 🤖 AI Feature
 
-The application integrates **Google Gemini AI** to provide intelligent clinical decision support.
+The application integrates **Google Gemini AI (Gemini Flash 2.5)** to provide intelligent clinical decision support.
 
 The AI performs:
 
