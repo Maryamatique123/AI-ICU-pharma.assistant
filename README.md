@@ -314,29 +314,6 @@ VITE_FIREBASE_APP_ID=
 
 ---
 
-# 📷 Screenshots
-
-Include at least three screenshots.
-
-### Dashboard
-
-(Add Screenshot)
-
-### Patient Management
-
-(Add Screenshot)
-
-### AI Prescription Review
-
-(Add Screenshot)
-
-### Drug Lookup
-
-(Add Screenshot)
-
-### Clinical Calculators
-
-(Add Screenshot)
 
 ---
 
@@ -352,6 +329,35 @@ Include at least three screenshots.
 
 ---
 
+# 📷 Screenshots
+
+### Dashboard
+
+<img width="958" height="485" alt="dashbard " src="https://github.com/user-attachments/assets/3db96b99-3564-4e7e-b4d5-326f5e607457" />
+
+
+### Patient Management
+
+<img width="960" height="517" alt="patient module " src="https://github.com/user-attachments/assets/81119b0f-fa6d-40be-b720-9dd5a527567e" />
+<img width="960" height="517" alt="patient module " src="https://github.com/user-attachments/assets/511baff8-cfd9-48c8-9896-4be8209e3cfc" />
+<img width="960" height="468" alt="drug lookup " src="https://github.com/user-attachments/assets/f3e56685-3484-41d3-b3e2-4236183667c9" />
+
+
+### AI Prescription Review
+
+<img width="956" height="479" alt="prescription review 1" src="https://github.com/user-attachments/assets/14ff4379-fc44-4234-b0ec-79d141797e64" />
+
+
+### Clinical Calculators
+
+<img width="960" height="482" alt="clinical calculator " src="https://github.com/user-attachments/assets/f79082ce-af33-4dd4-86b6-804241d95cc5" />
+
+
+### Clinical Consultation Report
+<img width="960" height="490" alt="print of report " src="https://github.com/user-attachments/assets/e5a7fb4d-ded2-4d3a-b7b6-d681ed4467f8" />
+<img width="959" height="482" alt="cunsult report " src="https://github.com/user-attachments/assets/7a768577-24e4-4cb9-b834-1b0316689e19" />
+
+
 # 👩‍💻 Developed By
 
 **Maryam Atique**
@@ -365,3 +371,5 @@ University of Balochistan
 # 📄 License
 
 This project was developed for educational purposes as part of an AI App Development Final Project.
+
+
