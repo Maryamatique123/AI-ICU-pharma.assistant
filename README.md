@@ -1,95 +1,279 @@
-# ICU Clinical Pharmacist Assistant
+# 🏥 ICU Clinical Pharmacist Assistant
 
-A hospital EMR-style clinical decision support platform designed for ICU clinical pharmacists. Built with React, TypeScript, Tailwind CSS, Vite, Express, and powered by Google Gemini 2.5 Flash for dynamic pharmacotherapy evaluation, drug interaction checking, organ clearance dosing adjustments, and drug monograph generation.
-
-## 🌟 Key Features
-
-- **Clinical Pharmacotherapy Evaluation**: Real-time screening of multi-drug ICU regimens for drug-drug interactions, duplicate therapies, and Cockcroft-Gault renal dosing clearance.
-- **Dynamic Gemini 2.5 Flash Drug Lookup**: Instant generation of complete professional clinical drug monographs for any brand or generic pharmaceutical agent.
-- **Clinical Calculators**: Cockcroft-Gault CrCl & IBW, Anion Gap, MAP (Mean Arterial Pressure), and Vasopressor Equivalence calculators.
-- **Patient ICU Roster & MAR**: Live patient tracking with MRN, age, weight, serum creatinine, allergy alerts, and active medication administration records.
-- **Consultation Reports**: Printable, structured clinical pharmacotherapy evaluation notes formatted for hospital EMR integration.
-- **Firebase Firestore Synchronization**: Real-time cloud synchronization for patient rosters and historical review records.
+> An AI-powered Clinical Decision Support System for ICU Clinical Pharmacists built with React, TypeScript, Firebase, and Google Gemini AI.
 
 ---
 
-## 🛠️ Project Structure
+# 📖 Overview
+
+ICU Clinical Pharmacist Assistant is a production-ready AI-powered web application designed to support ICU clinical pharmacists in reviewing prescriptions, identifying drug-related problems, performing renal dose adjustments, searching drug information, and generating professional clinical recommendations.
+
+The application combines modern web technologies with Google Gemini AI to assist pharmacists in making evidence-based medication decisions and improving patient safety in intensive care units.
+
+---
+
+# 🎯 Problem Statement
+
+Medication management in Intensive Care Units (ICUs) is highly complex. Clinical pharmacists must review multiple medications, identify drug interactions, adjust doses based on renal function, calculate clinical parameters, and document recommendations manually.
+
+This process is time-consuming and increases the risk of medication errors.
+
+ICU Clinical Pharmacist Assistant was developed to simplify this workflow by providing AI-assisted prescription analysis, drug information retrieval, clinical calculators, and professional consultation reports in one platform.
+
+---
+
+# 👥 Target Users
+
+- ICU Clinical Pharmacists
+- Hospital Pharmacists
+- Pharmacy Students
+- Clinical Pharmacy Residents
+- Healthcare Professionals
+
+---
+
+# 🌐 Live Demo
+
+https://ai-icu-pharma-assistant.vercel.app/
+
+---
+
+# 💻 GitHub Repository
+
+https://github.com/Maryamatique123/AI-ICU-pharma.assistant
+
+---
+
+# ✨ Features
+
+## 🔐 Authentication
+
+- User Registration
+- Secure Login
+- Logout
+- Firebase Authentication
+- Protected Dashboard
+
+---
+
+## 📊 Dashboard
+
+- ICU Clinical Dashboard
+- Patient Statistics
+- Review Metrics
+- Drug Lookup Summary
+- Clinical Activity Overview
+
+---
+
+## 👨‍⚕️ ICU Patient Management
+
+- Add Patient
+- Edit Patient
+- Delete Patient
+- Search Patients
+- Medication History
+- Allergy Documentation
+
+---
+
+## 💊 AI Prescription Review
+
+Analyze complete ICU prescriptions using Google Gemini AI.
+
+The AI reviews:
+
+- Drug Interactions
+- Therapeutic Duplication
+- Renal Dose Adjustments
+- High-Risk Medications
+- Clinical Recommendations
+- Pharmacist Notes
+
+---
+
+## 🔍 AI Drug Lookup
+
+Search any medicine and generate a professional clinical monograph including:
+
+- Generic Name
+- Brand Name
+- Drug Class
+- Mechanism of Action
+- Indications
+- Adult Dose
+- Renal Dose
+- Contraindications
+- Warnings
+- Adverse Effects
+- Drug Interactions
+- Pregnancy Information
+- Monitoring Parameters
+- Storage Conditions
+
+---
+
+## 🧮 Clinical Calculators
+
+- Cockcroft-Gault Creatinine Clearance Calculator
+- Ideal Body Weight (IBW)
+- Mean Arterial Pressure (MAP)
+- Anion Gap Calculator
+- Vasopressor Equivalence Calculator
+
+---
+
+## 📄 Clinical Reports
+
+Generate printable EMR-style consultation reports including:
+
+- Patient Summary
+- Medication Review
+- AI Recommendations
+- Clinical Notes
+- Pharmacist Recommendations
+
+---
+
+## ⚙️ Settings
+
+- Hospital Preferences
+- User Settings
+- Dark Mode
+- Application Configuration
+
+---
+
+# 🤖 AI Feature
+
+The application integrates **Google Gemini AI** to provide intelligent clinical decision support.
+
+The AI performs:
+
+- Prescription Review
+- Drug Information Retrieval
+- Drug Interaction Analysis
+- Renal Dose Adjustment Recommendations
+- Clinical Pharmacist Consultation Summaries
+
+---
+
+# 🧠 AI System Prompt (Summary)
+
+The AI is instructed to behave as an experienced ICU Clinical Pharmacist.
+
+For every prescription review, the AI should:
+
+- Analyze all prescribed medications.
+- Identify clinically significant drug-drug interactions.
+- Recommend renal dose adjustments based on kidney function.
+- Detect duplicate therapy.
+- Highlight high-alert medications.
+- Suggest monitoring parameters.
+- Generate evidence-based pharmacist recommendations.
+- Present the results in a structured and professional clinical report.
+
+---
+
+# 🛠️ Technologies Used
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+## Backend
+
+- Express.js
+- Node.js
+
+## Database
+
+- Firebase Firestore
+
+## Authentication
+
+- Firebase Authentication
+
+## Artificial Intelligence
+
+- Google Gemini AI (Gemini Flash)
+
+## Charts
+
+- Recharts
+
+## Icons
+
+- Lucide React
+
+## Deployment
+
+- Vercel
+
+## Version Control
+
+- GitHub
+
+---
+
+# 📁 Project Structure
 
 ```
-├── server.ts                  # Express server entry point with Vite middleware & Gemini API proxy
-├── server/
-│   ├── aiService.ts           # Google GenAI SDK integration & fallback handlers
-│   └── aiPrompts.ts           # Clinical prompt instructions for Gemini 2.5 Flash
-├── src/
-│   ├── main.tsx               # Application client entry point
-│   ├── App.tsx                # Main App shell, navigation & state management
-│   ├── index.css              # Tailwind CSS configuration
-│   ├── types.ts               # Global TypeScript interfaces (Patient, DrugMonograph, ReviewRecord)
-│   ├── components/            # Reusable UI components (Navbar, Sidebar, AuthModal, SeverityBadge)
-│   ├── context/               # AuthContext for Firebase Authentication
-│   ├── services/              # Firestore DB & Gemini API client services
-│   └── views/                 # Core view modules
-│       ├── DashboardView.tsx          # ICU Ward Overview & analytics
-│       ├── PatientsView.tsx           # Patient roster & active MAR management
-│       ├── PrescriptionReviewView.tsx # Pharmacotherapy AI evaluation view
-│       ├── ClinicalToolsView.tsx      # Clinical calculators & renal tools
-│       ├── DrugLookupView.tsx         # Dynamic Gemini 2.5 Flash drug monograph engine
-│       ├── ReportsView.tsx            # Printable consultation notes
-│       └── SettingsView.tsx           # Hospital unit & theme settings
-├── public/                    # Static assets
-├── firebase-blueprint.json    # Firestore schema specification
-├── firestore.rules            # Firestore security rules
-├── index.html                 # HTML template
-├── package.json               # Dependencies and scripts
-├── tsconfig.json              # TypeScript configuration
-└── vite.config.ts             # Vite build configuration
+src/
+ ├── components/
+ ├── context/
+ ├── services/
+ ├── views/
+ ├── types.ts
+ ├── App.tsx
+ └── main.tsx
+
+server/
+ ├── ai/
+ ├── routes/
+ └── server.ts
+
+public/
+
+firebase/
+
+README.md
+
+package.json
 ```
 
 ---
 
-## 🚀 Getting Started Locally
+# ⚙️ Installation
 
-### Prerequisites
+Clone the repository
 
-- **Node.js**: v18.x or v20.x or higher
-- **npm** or **bun**
+```bash
+git clone YOUR_GITHUB_LINK
+```
 
-### Installation
+Install dependencies
 
-1. Clone or extract the source code repository:
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
-   ```
+```bash
+npm install
+```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+Run development server
 
-3. Configure Environment Variables:
-   Create a `.env` file in the root directory (based on `.env.example`):
-   ```env
-   GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
-   ```
+```bash
+npm run dev
+```
 
-4. Start the Development Server:
-   ```bash
-   npm run dev
-   ```
-   The application will start on `http://localhost:3000`.
-
----
-
-## 📦 Building for Production
-
-To build the full-stack application (frontend + server bundle):
+Build production
 
 ```bash
 npm run build
 ```
 
-To run the production server locally or in a container:
+Start production server
 
 ```bash
 npm run start
@@ -97,17 +281,76 @@ npm run start
 
 ---
 
-## ☁️ Deployment
+# 🔒 Environment Variables
 
-### Deploying on Vercel / Cloud Run / Railway
+Create a `.env` file and configure:
 
-1. Push this repository to GitHub.
-2. Link the repository to your hosting platform.
-3. Set the build command to `npm run build` and start command to `npm run start`.
-4. Add `GEMINI_API_KEY` to your environment variables in your deployment dashboard.
+```env
+GEMINI_API_KEY=your_api_key
+
+VITE_FIREBASE_API_KEY=
+
+VITE_FIREBASE_AUTH_DOMAIN=
+
+VITE_FIREBASE_PROJECT_ID=
+
+VITE_FIREBASE_STORAGE_BUCKET=
+
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+
+VITE_FIREBASE_APP_ID=
+```
 
 ---
 
-## ⚖️ License & Medical Disclaimer
+# 📷 Screenshots
 
-This software is designed as a clinical decision support system for educational and clinical workflow demonstration purposes. Healthcare professionals must exercise independent clinical judgment when administering medications.
+Include at least three screenshots.
+
+### Dashboard
+
+(Add Screenshot)
+
+### Patient Management
+
+(Add Screenshot)
+
+### AI Prescription Review
+
+(Add Screenshot)
+
+### Drug Lookup
+
+(Add Screenshot)
+
+### Clinical Calculators
+
+(Add Screenshot)
+
+---
+
+# 🚀 Future Improvements
+
+- OpenFDA Drug Label Integration
+- Laboratory Result Interpretation
+- Therapeutic Drug Monitoring
+- Multi-language Support
+- Hospital EMR Integration
+- Medication Reconciliation
+- Clinical Guidelines Library
+
+---
+
+# 👩‍💻 Developed By
+
+**Maryam Atique**
+
+Final Year Pharm-D Student
+
+University of Balochistan
+
+---
+
+# 📄 License
+
+This project was developed for educational purposes as part of an AI App Development Final Project.
